@@ -1,0 +1,435 @@
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+ *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+
+
+// Your stylings should start here......
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: montserrat;
+  }
+  nav{
+    background: #f8a531;
+    height: 80px;
+    width: 100%;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 40px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  .Write1{
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    height: 815px;
+     .text1 {
+        border: none;
+        height: 600px;
+        width: 550px;
+        margin-left: 20px;
+         .text2 {
+            color: #e7ab3c;
+            font-size: 80px;
+            margin-bottom: 20px;
+
+         }
+         .text3 {
+            font-size: larger;
+            color: rgb(0, 0, 0);
+            text-align: left;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: rgb(219, 219, 219);
+            border-radius: 4px;
+         }
+         .btn1 {
+            width: 180px;
+            height: 50px;
+            color: white;
+            font-size: x-large;
+            background-color: black;
+            border-radius: 5px;
+            margin-left: px;
+            text-align: center;
+            margin-top: 40px;
+            cursor: pointer;
+
+         }
+         .dis1{
+            display: flex;
+            height: 210px;
+            width: 420px;
+            margin-top: 50px;
+            
+            .img3{
+              width: 60%;
+              height: 100%;
+            }
+            
+         }
+
+     }
+     .image101 {
+        border: 1px solid;
+        height: 750px;
+        width: 800px;
+        margin-left: 70px;
+        margin-top: 50px;
+        .img101 {
+          width: 100%;
+          height: 100%;
+
+        }
+     }
+
+ 
+
+  }
+  
+  
+.shopping {
+  justify-content: space-around;
+    display: flex;
+    margin-top: 40px;
+  .shopitems {
+    border: 5px solid;
+    border-radius: 50px;
+    height: 450px;
+    width: 300px;
+    
+    background-color: rgb(230, 230, 230);
+    .imgitems {
+      width: 100%;
+      height: 70%;
+      border-radius: 50px;
+    }
+    .itemname {
+      font-size: large;
+      margin-left: 20px;
+    }
+    .itemdiscount {
+      font-size: x-large;
+      color: #f8a531;
+      margin-left: 20px;
+    }
+    .itembutton {
+      border: 1px solid;
+      margin-left: 20px;
+      width: 145px;
+      height: 40px;
+      font-size: x-large;
+      background-color: black;
+      color: white;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
+.lastbtn {
+  // border: 1px solid;
+  height: 100px;
+  align-items: center;
+  margin-top: 60px;
+  justify-content: center;
+  margin-left: 470px;
+  .btn3 {
+    border: 1px solid;
+    width: 400px;
+    height: 30pxpx;
+    font-size: 45px;
+    text-align: center;
+    background-color: #f8a531;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+
+  }
+}
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none;
+  display: flex;
+  
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+  .dis1{
+    display: flex;
+    height: 100px;
+    width: 250px;
+    margin-top: 5px;
+    
+    .img3{
+      width: 60%;
+      height: 100%;
+    }
+    }
+}
